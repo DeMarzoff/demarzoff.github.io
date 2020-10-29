@@ -187,7 +187,11 @@ body::after {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.open,
 .navbar .navbar-nav .open>.nav-link {
-	color: #d5ac44
+	/*color: #d5ac44*/
+}
+
+.navbar-collapse > .navbar-nav:nth-child(1) {
+  display: none;
 }
 
 .dropdown-item {
@@ -205,11 +209,6 @@ body::after {
 
 .navbar {
 	text-transform: none;
-	background: none;
-	background-image: url();
-	background-repeat: no-repeat;
-	background-position: 50%;
-	background-size: auto 100%;
 	padding: unset;
 	font-size: 20px;
 	margin: 0px 16px 0px 0px;
@@ -219,19 +218,13 @@ body::after {
 }
 
 .navbar-brand {
-	position: center;
 	width: 175px;
 	padding: unset;
-	margin: 0 16px 0px 0px;
-	height: 105px;
-	background-repeat: no-repeat;
-	background-image: url('https://demarzoff.github.io/evorust.png');
-	background-position: 50%;
-	background-size: auto 100%;
-	color: transparent !important;
 	display: flex;
 	align-items: center;
-	top: 50%
+	height: 30px;
+  color: white !important;
+  letter-spacing: 5px;
 }
 
 .navbar .navbar-brand,
@@ -387,10 +380,6 @@ a:hover {
 	border-radius: 7.5px
 }
 
-.header__image {
-	width: 0
-}
-
 .s-alert-success {
 	background: linear-gradient(to right, #bb83c9 0%, #bf9dd1 100%);
 	color: #fff;
@@ -399,31 +388,26 @@ a:hover {
 }
 
 .navbar-nav .nav-item .nav-link[href="/login"] {
-	background: linear-gradient(to right, #bb83c9 0%, #bf9dd1 100%);
+	/*background: linear-gradient(to right, #bb83c9 0%, #bf9dd1 100%);
 	color: #fff;
-	padding: 12px 24px;
-	height: auto;
-	line-height: 24px;
 	border-radius: 10px 10px;
 	border: unset;
 	box-shadow: 0 0 10px #bb83c9;
 	transition: transform 350ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
-	margin-top: -5px
+	padding: 0px 10px;
+  line-height: 30px;*/
+  padding: 0px 10px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .navbar-nav .nav-item .nav-link[href="/login"]:hover {
-	transform: scale(1.25);
-	color: #fff !important;
-	box-shadow: 0 0 10px #bb83c9
+
 }
 
 .store-categories>.btn {
 	margin-bottom: 5px;
 	border-radius: 7.5px
-}
-
-.pull-xl-9 {
-	top: 60px
 }
 
 .progress {
@@ -579,7 +563,10 @@ a:hover {
 	color: white;
 	font-size: 11pt;
 	font-family: CeraPro, sans-serif;
-	text-align: center
+	text-align: center;
+	padding: 0px 10px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
@@ -767,7 +754,7 @@ h6 {
 	text-orientation: centre
 }
 
-.xbox.xbox_social {
+/*.xbox.xbox_social {
 	background: 0 0;
 	box-shadow: none;
 	display: flex;
@@ -807,7 +794,7 @@ h6 {
 .xbox.xbox_social a:hover {
 	box-shadow: 0 0 8px 8px #bb83c9;
 	transform: scale3d(1.25, 1.25, 1.25)
-}
+}*/
 
 .bg-success {
 	position: relative;
@@ -1482,6 +1469,11 @@ h6 {
 
 .navbar {
 	text-transform: unset;
+	background: rgba(0, 0, 0, 0.4);
+  box-shadow: #bb83c9 0px 0px 30px 0px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
 }
 
 .dropdown-item[href="/servers/4823"]:before,
@@ -2028,10 +2020,10 @@ textarea {
 }
 
 .header__image {
-	border-radius: 15px;
-	animation: fadeIn 1s;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
-	background: #f3f3f3;
+	height: auto;
+  width: 50%;
+  display: block;
+  margin: 20px auto;
 }
 
 .avatar {
@@ -2110,13 +2102,6 @@ textarea {
 
 .xbox_bonuses {
 	animation: zoomInUp 1.8s;
-}
-
-.header__image {
-	border-radius: 15px;
-	animation: fadeIn 1s;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
-	background: #f3f3f3;
 }
 
 .blueprint__image,
@@ -2266,11 +2251,11 @@ table {
 }
 
 .xbox_bonus_info > .xbox__header {
-	padding: 10px;
+	padding: 10px 10px 0px 10px;
 }
 
 .xbox_bonus_info > .xbox__body {
-	padding: 10px;
+	padding: 0px 10px 10px 10px;
 }
 
 .xbox_bonus_info .bonus_list {
@@ -2297,4 +2282,86 @@ table {
   float: right;
   border-radius: 5px;
   font-size: 15px;
+}
+
+
+.xbox_social {
+	margin: 20px 0px;
+}
+.xbox_social > .xbox__body {
+	padding: 10px;
+}
+
+.xbox_social .social_list {
+	margin: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.xbox_social .social_list a {
+  width: calc(90% / 3);
+  height: 50px;
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: #bb83c9 0px 0px 30px 0px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.xbox_social .social_list a:hover {
+  background: #bb83c9;
+}
+
+.xbox_social .social_list a div {
+  width: 100%;
+  height: 100%;
+}
+
+.xbox_social .social_list a span {
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: -20px;
+  width: 100%;
+}
+
+.xbox_social .social_list .chat {
+	
+}
+
+.xbox_social .social_list .chat div {
+  width: 100%;
+  height: 100%;
+  background: url('https://demarzoff.github.io/vk.svg') no-repeat center center;
+  background-size: 80%;
+}
+
+.xbox_social .social_list .vk {
+	
+}
+
+.xbox_social .social_list .vk div {
+  width: 100%;
+  height: 100%;
+	background: url('https://demarzoff.github.io/vk.svg') no-repeat center center;
+  background-size: 80%;
+}
+
+.xbox_social .social_list .discord {
+	
+}
+
+.xbox_social .social_list .discord div {
+  width: 100%;
+  height: 100%;
+	background: url('https://demarzoff.github.io/discord.svg') no-repeat center center;
+  background-size: 80%;
 }
