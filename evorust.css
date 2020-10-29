@@ -62,7 +62,7 @@ a[href="/products/79665"] {
 
 body::after {
 	/*background-color: #2a2929;*/
-	background-image: url('https://s1.uniq.host/48f80b39-e12f-4b90-9cf6-f18a93cb632c/evorust/bg1.png');
+	background-image: url('https://demarzoff.github.io/bg1.png');
 	background-attachment: fixed;
 	background-size: cover;
 	content: "";
@@ -225,7 +225,7 @@ body::after {
 	margin: 0 16px 0px 0px;
 	height: 105px;
 	background-repeat: no-repeat;
-	background-image: url(https://s1.uniq.host/48f80b39-e12f-4b90-9cf6-f18a93cb632c/evorust/evorust.png);
+	background-image: url(https://demarzoff.github.io/evorust.png);
 	background-position: 50%;
 	background-size: auto 100%;
 	color: transparent !important;
