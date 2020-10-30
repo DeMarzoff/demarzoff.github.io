@@ -674,8 +674,10 @@ window.onload = function () {
   curcontent["block"].xcon += '</div>\<br></i></div>';
 
   //scratched widget init
-  setTimeout(function() {
+  while(promoWrap == null || typeof promoWrap == 'undefined') {
     promoWrap = document.getElementById('promo');
+  }
+  if (promoWrap != null) {
     scratch = promoWrap.children[1];
     scratchParts = [];
 
@@ -703,7 +705,7 @@ window.onload = function () {
         toscratch();
       }
     }
-  }, 1000);
+  }
 }
 
 function toscratch() {
