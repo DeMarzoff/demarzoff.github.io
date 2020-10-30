@@ -674,34 +674,36 @@ window.onload = function () {
   curcontent["block"].xcon += '</div>\<br></i></div>';
 
   //scratched widget init
-  promoWrap = document.getElementById('promo');
-  scratch = promoWrap.children[1];
-  scratchParts = [];
+  setTimeout(function() {
+    promoWrap = document.getElementById('promo');
+    scratch = promoWrap.children[1];
+    scratchParts = [];
 
-  //gen scratch parts
-  let partsCount = (promoWrap.offsetWidth+screatchProperties.l*-1)/screatchProperties.h;
-  for (let a = 0; a < partsCount; a++) {
-    let part = document.createElement('div');
-    let bg = document.createElement('div');
-    part.className = 's-part';
-    part.style.height = screatchProperties.h+'px';
-    part.style.top = screatchProperties.t+'px';
-    part.style.left = (screatchProperties.l+screatchProperties.h*a)+'px';
-    bg.className = 'bg';
-    bg.style.top = (screatchProperties.bgt-(screatchProperties.h*0.7)*a)+'px';
-    bg.style.left = (screatchProperties.bgl-(screatchProperties.h*0.7)*a)+'px';
-    part.append(bg);
-    scratch.append(part);
-    scratchParts.push(part);
-  }
-  promoWrap.style.opacity = 1;
-  scratch.onclick=function(event){
-    if (!scratched) {
-      scratched = true;
-      // scratch.getElementsByTagName('img')[0].remove();
-      toscratch();
+    //gen scratch parts
+    let partsCount = (promoWrap.offsetWidth+screatchProperties.l*-1)/screatchProperties.h;
+    for (let a = 0; a < partsCount; a++) {
+      let part = document.createElement('div');
+      let bg = document.createElement('div');
+      part.className = 's-part';
+      part.style.height = screatchProperties.h+'px';
+      part.style.top = screatchProperties.t+'px';
+      part.style.left = (screatchProperties.l+screatchProperties.h*a)+'px';
+      bg.className = 'bg';
+      bg.style.top = (screatchProperties.bgt-(screatchProperties.h*0.7)*a)+'px';
+      bg.style.left = (screatchProperties.bgl-(screatchProperties.h*0.7)*a)+'px';
+      part.append(bg);
+      scratch.append(part);
+      scratchParts.push(part);
     }
-  }
+    promoWrap.style.opacity = 1;
+    scratch.onclick=function(event){
+      if (!scratched) {
+        scratched = true;
+        // scratch.getElementsByTagName('img')[0].remove();
+        toscratch();
+      }
+    }
+  }, 1000);
 }
 
 function toscratch() {
