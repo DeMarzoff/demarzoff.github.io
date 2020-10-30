@@ -674,10 +674,14 @@ window.onload = function () {
   curcontent["block"].xcon += '</div>\<br></i></div>';
 
   //scratched widget init
-  while(promoWrap == null || typeof promoWrap == 'undefined') {
+  scratchInit();
+}
+
+function scratchInit() {
+  if (promoWrap == null || typeof promoWrap == 'undefined') {
     promoWrap = document.getElementById('promo');
-  }
-  if (promoWrap != null) {
+    setTimeout(scratchInit, 1000);
+  } else {
     scratch = promoWrap.children[1];
     scratchParts = [];
 
