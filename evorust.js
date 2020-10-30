@@ -508,7 +508,7 @@ var BlockListArrays = [
   /* 12 часов */ ["smg.mp5", "rifle.bolt", "rifle.m39", "metal.facemask", "metal.plate.torso", "grenade.f1"],
   /* 24 часа  */ ["rifle.ak", "rifle.lr300", "rifle.l96", "grenade.beancan", "surveycharge", "explosive.satchel"],
   /* 36 часов */ ["lmg.m249", "heavy.plate.helmet", "heavy.plate.jacket", "heavy.plate.pants"],
-  /* 48 часов */ ["ammo.rifle.explosive", "ammo.rocket.basic", "ammo.rocket.fire", "ammo.rocket.hv", "rocket.launcher", "explosive.timed"],
+  /* 48 часов */ ["ammo.rifle.explosive", "ammo.rocket.basic", "rocket.launcher", "explosive.timed"],
 ];
 
 /*
@@ -646,6 +646,16 @@ function search(e){
     }
 }
 
+var promoWrap,
+    scratch,
+    scratchParts,
+    scratched = false;
+    screatchProperties = {
+      h: 10, l: -70,
+      speed: 2,  t: 20,
+      bgt: 65, bgl: 35,
+    };
+
 window.onload = function () {
   document.body.onclick=function(event)
   {
@@ -662,4 +672,55 @@ window.onload = function () {
     curcontent["block"].xcon += '</div>';
   }
   curcontent["block"].xcon += '</div>\<br></i></div>';
+
+  document.getElementsByClassName('xbox_social')[0].getElementsByTagName('a').onclick=function(event){
+    // event.preventDefault();
+    // window.open(event.target.href, '_blank');
+    console.log(event);
+  }
+
+  //scratched widget init
+  promoWrap = document.getElementById('promo');
+  scratch = promoWrap.children[1];
+  scratchParts = [];
+
+  //gen scratch parts
+  let partsCount = (promoWrap.offsetWidth+screatchProperties.l*-1)/screatchProperties.h;
+  for (let a = 0; a < partsCount; a++) {
+    let part = document.createElement('div');
+    let bg = document.createElement('div');
+    part.className = 's-part';
+    part.style.height = screatchProperties.h+'px';
+    part.style.top = screatchProperties.t+'px';
+    part.style.left = (screatchProperties.l+screatchProperties.h*a)+'px';
+    bg.className = 'bg';
+    bg.style.top = (screatchProperties.bgt-(screatchProperties.h*0.7)*a)+'px';
+    bg.style.left = (screatchProperties.bgl-(screatchProperties.h*0.7)*a)+'px';
+    part.append(bg);
+    scratch.append(part);
+    scratchParts.push(part);
+  }
+  promoWrap.style.opacity = 1;
+  scratch.onclick=function(event){
+    if (!scratched) {
+      scratched = true;
+      // scratch.getElementsByTagName('img')[0].remove();
+      toscratch();
+    }
+  }
+}
+
+function toscratch() {
+  if (Object.keys(scratchParts).length > 0) {
+    let part2scratch = Math.floor(Math.random() * (Object.keys(scratchParts).length + 1));
+    if (typeof scratchParts[Object.keys(scratchParts)[part2scratch]] != 'undefined') {
+      let part = scratchParts[Object.keys(scratchParts)[part2scratch]];
+      part.style.width = '0px';
+      delete(scratchParts[Object.keys(scratchParts)[part2scratch]]);
+      part.remove();
+    }
+    setTimeout(toscratch, 50);
+  } else {
+    scratch.remove();
+  }
 }
