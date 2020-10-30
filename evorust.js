@@ -673,12 +673,6 @@ window.onload = function () {
   }
   curcontent["block"].xcon += '</div>\<br></i></div>';
 
-  document.getElementsByClassName('xbox_social')[0].getElementsByTagName('a').onclick=function(event){
-    // event.preventDefault();
-    // window.open(event.target.href, '_blank');
-    console.log(event);
-  }
-
   //scratched widget init
   promoWrap = document.getElementById('promo');
   scratch = promoWrap.children[1];
