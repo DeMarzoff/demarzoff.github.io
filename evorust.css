@@ -135,6 +135,7 @@ body::after {
 .ladda-button[data-style=zoom-out] {
 	overflow: hidden;
 	background: rgba(0, 0, 0, 0.3);
+	border-color: transparent;
 }
 
 .bg-success {
@@ -594,6 +595,12 @@ a:hover {
   opacity: .65;
 }
 
+.page-item.active .page-link {
+  color: #333;
+  background-color: #bb83c9;
+  border-color: transparent;
+}
+
 .roulette:before {
 	content: "";
 	position: absolute;
@@ -701,10 +708,6 @@ a:hover {
 .modal .modal-body {
 	padding: 16px;
 	background: rgba(0, 0, 0, 0)
-}
-
-.ladda-button[data-style=zoom-out] {
-	overflow: hidden;
 }
 
 select option {
@@ -1898,7 +1901,7 @@ textarea {
 }
 
 .modal .modal-footer .btn-secondary:hover {
-	color: #bb83c9;
+	color: #fff;
 	box-shadow: none;
 }
 

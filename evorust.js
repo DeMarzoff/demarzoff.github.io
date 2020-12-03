@@ -892,8 +892,10 @@ window.onload = function () {
   // lvl sys init
   Object.keys(lvlsys).forEach(function(type, numKey){
     let lvls = lvlsys[type].list;
+    let needExp = 0;
     lvls.forEach(function(value){
-      curcontent["lvl-system-"+type].patternxcon += `<div class="lvl-el"><div class="lvl-header">Уровень ${value.lvl}</div><div class="lvl-body"><img src="${value.img}" alt=""></div><div class="lvl-footer">Exp: ${value.exp}</div></div>`;
+      needExp += value.exp;
+      curcontent["lvl-system-"+type].patternxcon += `<div class="lvl-el"><div class="lvl-header">Уровень ${value.lvl}</div><div class="lvl-body"><img src="${value.img}" alt=""></div><div class="lvl-footer">Exp: ${needExp}</div></div>`;
     });
     curcontent["lvl-system-"+type].patternxcon += '</div></div>';
     curcontent["lvl-system-"+type].xcon = curcontent["lvl-system-"+type].patternxcon;
