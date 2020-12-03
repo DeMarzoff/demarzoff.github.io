@@ -84,7 +84,7 @@ body::after {
 }
 
 .xbox_store {
-	background: rgba(37, 37, 37, 0.9);
+	background: rgba(74, 51, 80, 0.80);
   /*box-shadow: #bb83c9 0px 0px 30px 0px;*/
   border-radius: 5px;
 }
@@ -134,9 +134,7 @@ body::after {
 
 .ladda-button[data-style=zoom-out] {
 	overflow: hidden;
-	box-shadow: 0 0 10px #bb83c9;
-	background: rgba(172, 172, 172, 50%);
-	border-color: #bb83c9;
+	background: rgba(0, 0, 0, 0.3);
 }
 
 .bg-success {
@@ -182,7 +180,7 @@ body::after {
 .navbar {
 	font-size: 20px;
 	text-transform: unset;
-	background: rgba(37, 37, 37, 0.9);
+	background: rgba(74, 51, 80, 0.80);
   /*box-shadow: #bb83c9 0px 0px 30px 0px;*/
   border-radius: 5px;
   padding: 10px 20px;
@@ -233,7 +231,7 @@ a:hover {
 .xbox.xbox_widget_stats .xbox__footer,
 .xbox.xbox_widget_stats .xbox__header,
 .xbox.xbox_widget_stats .xbox__body {
-	background: rgba(37, 37, 37, 0.9) !important;
+	background: rgba(74, 51, 80, 0.80) !important;
 }
 
 .xbox__footer {
@@ -248,11 +246,11 @@ a:hover {
 }
 
 .xbox_server, .xbox_player {
-	background: rgba(37, 37, 37, 0.9);
+	background: rgba(74, 51, 80, 0.80);
 }
 
 .xbox_server .server-navigation a {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .nav-pills .nav-link:focus, .nav-pills .nav-link:hover {
@@ -261,22 +259,22 @@ a:hover {
 
 .player-stats__navigation a {
 	color: #fff !important;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.3) !important;
 }
 
 .nav-pills .nav-link.active {
-  color: #fff;
-  background: #bf9dd1;
+  color: #fff !important;
+  background: #bf9dd1 !important;
 }
 
 .product {
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.3);
 	border-radius: 10px;
 	transition: all 0.2s;
 }
 
 .product:hover {
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.3);
 	transform: scale3d(1.2, 1.2, 1.2);
 	/*box-shadow: 0 0 40px 0 #bb83c9;*/
 }
@@ -331,7 +329,7 @@ a:hover {
 
 .btn-secondary {
 	color: #fff;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.3);
 	border-color: transparent;
 	outline: none !important
 }
@@ -341,7 +339,7 @@ a:hover {
 }
 
 .input-group {
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.3);
 	border-radius: 5px;
   overflow: hidden;
 }
@@ -504,7 +502,7 @@ a:hover {
 }
 
 .table-body {
-	/*background: rgba(37, 37, 37, 0.9);*/
+	/*background: rgba(74, 51, 80, 0.80);*/
 }
 
 .xbox__body a div {
@@ -512,7 +510,7 @@ a:hover {
 }
 
 .xbox_rules .xbox__body {
-  background: rgba(37, 37, 37, 0.9);
+  background: rgba(74, 51, 80, 0.80);
 }
 
 .xbox_menu .xbox__body div {
@@ -531,7 +529,7 @@ a:hover {
 
 .btn-success {
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .btn-success.active,
@@ -586,14 +584,14 @@ a:hover {
   padding: 8px 16px;
   margin-left: 5px;
   line-height: unset;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 3px;
 }
 
 .page-item.disabled .page-link {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: .65;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: .65;
 }
 
 .roulette:before {
@@ -707,7 +705,6 @@ a:hover {
 
 .ladda-button[data-style=zoom-out] {
 	overflow: hidden;
-	box-shadow: 0 0 10px #bb83c9
 }
 
 select option {
@@ -1232,7 +1229,7 @@ h6 {
 	cursor: pointer;
 	margin-bottom: 5px;
 	padding: 5px;
-	background: rgba(0, 0, 0, 0.8);
+	background: rgba(0, 0, 0, 0.3);
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 	transition: all 0.2s ease-in-out;
 	letter-spacing: 0px;
@@ -1398,7 +1395,7 @@ h6 {
 	border-right: 3px solid #bb83c9;
 	margin-bottom: 10px;
 	padding: 2px;
-	background: rgba(37, 37, 37, 0.9);
+	background: rgba(74, 51, 80, 0.80);
 	border-radius: 10px;
 	transition: all 220ms;
 	height: auto;
@@ -1918,7 +1915,7 @@ textarea {
 }
 
 .table-striped>tbody>tr:nth-of-type(odd) {
-	background-color: rgba(37, 37, 37, 0.9) !important;
+	background-color: rgba(74, 51, 80, 0.80) !important;
 }
 
 table {
@@ -1926,7 +1923,7 @@ table {
 }
 
 .xbox_bonus_info {
-	background: rgba(37, 37, 37, 0.9);
+	background: rgba(74, 51, 80, 0.80);
   /*box-shadow: #bb83c9 0px 0px 30px 0px;*/
   border-radius: 5px;
   margin: 50px 0px;
@@ -1987,7 +1984,7 @@ table {
   width: calc(90% / 3);
   height: 50px;
   display: block;
-  background: rgba(37, 37, 37, 0.9);
+  background: rgba(74, 51, 80, 0.80);
   /*box-shadow: #bb83c9 0px 0px 30px 0px;*/
   border-radius: 5px;
   padding: 5px;
@@ -2050,7 +2047,7 @@ table {
 
 /* promo */
 .xbox_promo {
-	background: rgba(37, 37, 37, 0.9);
+	background: rgba(74, 51, 80, 0.80);
   /*box-shadow: #bb83c9 0px 0px 30px 0px;*/
   border-radius: 5px;
   margin: 20px 0px;
