@@ -247,6 +247,28 @@ a:hover {
 	padding: 20px;
 }
 
+.xbox_server, .xbox_player {
+	background: rgba(37, 37, 37, 0.9);
+}
+
+.xbox_server .server-navigation a {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-pills .nav-link:focus, .nav-pills .nav-link:hover {
+	background: #bf9dd1 !important;
+}
+
+.player-stats__navigation a {
+	color: #fff !important;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-pills .nav-link.active {
+  color: #fff;
+  background: #bf9dd1;
+}
+
 .product {
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 10px;
@@ -509,30 +531,27 @@ a:hover {
 
 .btn-success {
 	color: #fff;
-	background-color: #bb83c9;
-	border-color: #bb83c9
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .btn-success.active,
 .btn-success:active,
 .show>.btn-success.dropdown-toggle {
 	color: #fff;
-	background-color: #bb83c9 !important;
+	background: #bb83c9 !important;
 	background-image: none;
-	border-color: #bb83c9 !important;
 }
 
 .btn-success:hover {
 	color: #fff;
-	background-color: #bb83c9;
-	border-color: #bb83c9;
-	transform: scale(1.25)
+	background: #bb83c9;
+	transform: scale(1.25);
 }
 
 .btn-success.disabled,
 .btn-success:disabled {
-	background-color: #bb83c9;
-	border-color: #bb83c9
+	background: #bb83c9;
+	border-color: #bb83c9;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -552,6 +571,29 @@ a:hover {
 		height: 41px;
 		margin-left: 10px
 	}
+}
+
+.pagination {
+	color: #fff !important;
+}
+
+.page-link, .page-link:focus, .page-link:hover {
+  color: #fff !important;
+  background: #bb83c9;
+}
+
+.page-link {
+  padding: 8px 16px;
+  margin-left: 5px;
+  line-height: unset;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+}
+
+.page-item.disabled .page-link {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: .65;
 }
 
 .roulette:before {
@@ -2090,14 +2132,14 @@ table {
 .xbox_custom_lvlsys .lvl-el {
 	height: 110px;
   width: 100px;
-  background: rgb(187, 131, 201, 0.25);
+  background: rgba(187, 131, 201, 0.25);
   border-radius: 10px;
   margin: 5px;
   overflow: hidden;
 }
 .lvl-el .lvl-header {
 	height: 25px;
-  background: rgb(187, 131, 201, 0.25);
+  background: rgba(187, 131, 201, 0.25);
   padding-top: 5px;;
 }
 .lvl-el .lvl-body {
@@ -2108,6 +2150,6 @@ table {
 }
 .lvl-el .lvl-footer {
 	height: 25px;
-  background: rgb(187, 131, 201, 0.25);
+  background: rgba(187, 131, 201, 0.25);
   padding-bottom: 5px;
 }
