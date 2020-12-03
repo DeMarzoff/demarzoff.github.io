@@ -2140,7 +2140,8 @@ table {
 .lvl-el .lvl-header {
 	height: 25px;
   background: rgba(187, 131, 201, 0.25);
-  padding-top: 5px;;
+  padding-top: 5px;
+  font-size: 12px;
 }
 .lvl-el .lvl-body {
 	height: 60px;
@@ -2152,4 +2153,5 @@ table {
 	height: 25px;
   background: rgba(187, 131, 201, 0.25);
   padding-bottom: 5px;
+  font-size: 12px;
 }
